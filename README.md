@@ -73,9 +73,9 @@ You’ll see a progress bar for overall sync, and per-file label progress. Sit b
 
 ## 🔧 Future features
 
-- **Hot-Reloading**: Want the server to watch your file tree and auto-index new patches? Add `chokidar` and trigger `initFileIndex()` on change.
-- **Logging**: Integrate `morgan` or `winston` on the server for fancy log output.  
-- **Dockerize**: Spin up your server in a container so you can deploy on any cloud with zero brain cells used.
+- **Hot-Reloading**
+- **More Logging**  
+- **Docker Support**
 
 ---
 
