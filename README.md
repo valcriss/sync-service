@@ -1,4 +1,4 @@
-# SyncService: The Directory Updater That Doesn’t Make You Rage-Quit 🐉
+# Sync-Service: The Directory Updater That Doesn’t Make You Rage-Quit 🐉
 
 Welcome, heroic adventurer! You’ve braved the dark corners of GitHub to find a reliable, fast, and slightly sassy World of Warcraft updater. If you’re tired of outdated launchers that move slower than a turtle on a good day, you’ve come to the right place.
 
@@ -6,7 +6,7 @@ Welcome, heroic adventurer! You’ve braved the dark corners of GitHub to find a
 
 ## 🧐 What Is SyncService?
 
-SyncService is a client-server synchronization tool designed specifically for patching massive games like World of Warcraft. It leverages a lightweight Node.js server and a WinForms C# client to:
+Sync-Service is a client-server synchronization tool designed specifically for patching massive games like World of Warcraft. It leverages a lightweight Node.js server and a WinForms C# client to:
 
 1. **Index** all your game files on the server (SHA-256 hash, size).  
 2. **Scan** the client’s local copy, detect missing or changed files.  
