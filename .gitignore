@@ -1,0 +1,83 @@
+# Node.js
+############################
+# dependencies
+/*/node_modules
+/*/.pnp
+/*/.pnp.js
+
+# debug
+/*/npm-debug.log*
+/*/yarn-debug.log*
+/*/yarn-error.log*
+
+# env files
+.env
+.env.*.local
+
+# build outputs
+/*//dist
+/*//build
+/*//lib
+/*/*.local
+
+# lock files
+package-lock.json
+/*/yarn.lock
+/*/pnpm-lock.yaml
+
+# C# / .NET
+############################
+# Build Folders (you can keep bin/ obj/ if you prefer)
+/*/**/bin/
+/*/**/obj/
+
+# Visual Studio
+/*/.vs/
+/*/*.user
+/*/*.suo
+/*/*.userosscache
+/*/*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+/*/.idea/
+
+# JetBrains ReSharper
+/*/_ReSharper*/
+/*/*.DotSettings.user
+
+# User-specific files
+/*/*.user
+/*/*.rsuser
+/*/*.userprefs
+
+# MonoDevelop
+/*/*.pidb
+/*/*.userprefs
+
+# OS-specific
+############################
+# macOS
+/*/.DS_Store
+
+# Windows thumbnails
+/*/Thumbs.db
+/*/ehthumbs.db
+
+# Logs
+############################
+/*/*.log
+/*/logs/
+/*/logs/**
+
+# Others
+############################
+# Temporary files
+/*/*.tmp
+/*/*.temp
+
+# Coverage
+/*/coverage/
+/*/*.lcov
