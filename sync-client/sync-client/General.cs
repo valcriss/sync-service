@@ -142,7 +142,7 @@ namespace sync_client
                     }
                 }
             }
-
+            label5.Text = _config.GameName;
             _config.ServerUrl = _config.ServerUrl;
             _config.Save();
             if(string.IsNullOrEmpty(_config.ServerUrl))

@@ -37,6 +37,7 @@
             labelStatus = new Label();
             progressBarOverall = new ProgressBar();
             button1 = new Button();
+            label5 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -127,6 +128,18 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // label5
+            // 
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(12, 181);
+            label5.Name = "label5";
+            label5.Size = new Size(696, 40);
+            label5.TabIndex = 2;
+            label5.Text = "Game Name";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // General
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -134,6 +147,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(720, 386);
+            Controls.Add(label5);
             Controls.Add(button1);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -157,5 +171,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private Label label5;
     }
 }
