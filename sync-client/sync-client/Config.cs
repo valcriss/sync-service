@@ -15,6 +15,8 @@ namespace sync_client
         public string? LocalPath { get; set; } = null;
         public string? ServerUrl { get; set; }
         public int MaxParallelDownloads { get; set; } = 4;
+        public string GameName { get; internal set; } = string.Empty;
+        public string ExecArgs { get; set; } = string.Empty;
 
         public static Config LoadOrCreate()
         {

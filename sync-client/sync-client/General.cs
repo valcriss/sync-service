@@ -18,6 +18,8 @@ namespace sync_client
         private int totalFiles;
         private int completedFiles;
         private Label[] labels;
+        private Point StartingPosition = new Point(12, 303);
+        private Size StartingSize = new Size(696, 71);
 
         public General()
         {
@@ -39,6 +41,9 @@ namespace sync_client
                 if (i == 0) continue;
                 labels[i].Visible = false;
             }
+            groupBox1.Location = StartingPosition;
+            groupBox1.Size = StartingSize;
+            Application.DoEvents();
         }
 
         private void UpdateStatus(string message)
@@ -51,6 +56,9 @@ namespace sync_client
         {
             labels[index].Visible = true;
             labels[index].Text = message;
+            int visibleCount = labels.Count(l => l.Visible) - 1;
+            groupBox1.Location = new Point(StartingPosition.X, StartingPosition.Y - ((visibleCount * 22) + (visibleCount - 1) * 3));
+            groupBox1.Size = new Size(StartingSize.Width, StartingSize.Height + ((visibleCount * 22) + (visibleCount - 1) * 3));
             Application.DoEvents();
         }
 
@@ -121,7 +129,7 @@ namespace sync_client
             {
                 using (var dlg = new FolderBrowserDialog())
                 {
-                    dlg.Description = "Sélectionnez le dossier à synchroniser";
+                    dlg.Description = "Sélectionnez le dossier où installer le jeu " + _config.GameName;
                     if (dlg.ShowDialog() == DialogResult.OK)
                     {
                         _config.LocalPath = dlg.SelectedPath;
@@ -134,10 +142,13 @@ namespace sync_client
                     }
                 }
             }
-            if (string.IsNullOrEmpty(_config.ServerUrl))
+
+            _config.ServerUrl = _config.ServerUrl;
+            _config.Save();
+            if(string.IsNullOrEmpty(_config.ServerUrl))
             {
-                _config.ServerUrl = "http://localhost:5000";
-                _config.Save();
+                MessageBox.Show("L'URL du serveur est requise.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(1);
             }
             _httpClient.BaseAddress = new Uri(_config.ServerUrl);
             HideLabels();
@@ -277,6 +288,7 @@ namespace sync_client
             }
             Process process = new Process();
             process.StartInfo.FileName = path;
+            process.StartInfo.Arguments = _config.ExecArgs;
             process.StartInfo.WorkingDirectory = _config.LocalPath;
             process.Start();
             this.Close();

@@ -50,9 +50,9 @@
             groupBox1.Controls.Add(labelStatus);
             groupBox1.Controls.Add(progressBarOverall);
             groupBox1.ForeColor = Color.White;
-            groupBox1.Location = new Point(12, 209);
+            groupBox1.Location = new Point(12, 302);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(696, 165);
+            groupBox1.Size = new Size(696, 72);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Process";
