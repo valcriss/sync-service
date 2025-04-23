@@ -47,14 +47,14 @@ All that without making you pull out your hair.
 
 ```bash
 git clone https://github.com/valcriss/sync-service.git
-cd SyncMaster
+cd sync-service
 ```
 
 ### 2. Run the Server
 
 ```bash
 cd sync-server
-tnpm install
+npm install
 node index.js /path/to/your/files
 ```
 
